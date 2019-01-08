@@ -16,8 +16,6 @@ export class Pelicula extends Component {
     );
     const peliculas = await api_fecth.json();
     this.setState({ peliculas: peliculas.results });
-    console.log(peliculas);
-    
   }
 
   render() {
