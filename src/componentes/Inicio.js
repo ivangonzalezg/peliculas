@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import fondo from './inicio.jpeg'
 
 export class Inicio extends Component {
   render() {
     return (
       <div>
-        <h1>Página de inicio</h1>
+        <img width="100%" src={fondo} alt="Fondo" />
       </div>
     );
   }

@@ -21,7 +21,7 @@ export class Menu extends Component {
             to="/peliculas"
             active={window.location.pathname === "/peliculas"}
           >
-            Peliculas
+            Buscar peliculas
           </NavItem>
           <NavItem
             componentClass={Link}
