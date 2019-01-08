@@ -12,7 +12,7 @@ export class Pelicula extends Component {
     const peliculaPorBuscar = e.target.elements.peliculaPorBuscar.value;
     e.preventDefault();
     const api_fecth = await fetch (
-      `http://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${peliculaPorBuscar}&media=movie&country=CO`
+      `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${peliculaPorBuscar}&media=movie&country=CO`
     );
     const peliculas = await api_fecth.json();
     this.setState({ peliculas: peliculas.results });
