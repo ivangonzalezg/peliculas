@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^9.9.0",
     "bootstrap": "^3.4.0",
+    "jwt-decode": "^2.2.0",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
     "react-browser-router": "^2.1.2",

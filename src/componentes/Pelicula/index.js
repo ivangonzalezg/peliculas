@@ -11,7 +11,7 @@ export class Pelicula extends Component {
   peliculaPorBuscar = async (e) => {
     const peliculaPorBuscar = e.target.elements.peliculaPorBuscar.value;
     e.preventDefault();
-    const api_fecth = await fetch (
+    const api_fecth = await fetch(
       `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${peliculaPorBuscar}&media=movie&country=CO`
     );
     const peliculas = await api_fecth.json();
@@ -25,7 +25,7 @@ export class Pelicula extends Component {
           <Row>
             <PageHeader>Lista de peliculas</PageHeader>
             <BuscarPelicula peliculaPorBuscar={this.peliculaPorBuscar} />
-          </Row>  
+          </Row>
           <br />
           <Row>
             <PeliculasEncontradas peliculas={this.state.peliculas} />
