@@ -27,7 +27,7 @@ export class Pelicula extends Component {
         <div>
           <Grid>
             <Row>
-              <PageHeader>Lista de peliculas</PageHeader>
+              <PageHeader style={{textAlign: "center"}}>Lista de peliculas</PageHeader>
               <BuscarPelicula peliculaPorBuscar={this.peliculaPorBuscar} />
               <Cargando />
             </Row>
@@ -39,7 +39,7 @@ export class Pelicula extends Component {
       <div>
         <Grid>
           <Row>
-            <PageHeader>Lista de peliculas</PageHeader>
+            <PageHeader style={{textAlign: "center"}}>Lista de peliculas</PageHeader>
             <BuscarPelicula peliculaPorBuscar={this.peliculaPorBuscar} />
           </Row>
           <br />

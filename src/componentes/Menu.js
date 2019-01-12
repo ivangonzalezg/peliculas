@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavItem, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import './Menu.css';
+import "./Menu.css";
 
 export class Menu extends Component {
   render() {
+    const name = localStorage.getItem("user_name");
+    const space = " ";
     return (
       <Navbar className="Navbar-top">
         <Nav className="Nav-top">
@@ -16,7 +18,7 @@ export class Menu extends Component {
           >
             Inicio
           </NavItem>
-          {this.props.auth.isAuthenticated() &&
+          {this.props.auth.isAuthenticated() && (
             <NavItem
               componentClass={Link}
               href="/peliculas"
@@ -25,7 +27,7 @@ export class Menu extends Component {
             >
               Buscar peliculas
             </NavItem>
-          }
+          )}
           <NavItem
             componentClass={Link}
             href="/saludar"
@@ -34,16 +36,23 @@ export class Menu extends Component {
           >
             Saludar
           </NavItem>
-          {!this.props.auth.isAuthenticated() &&
-            <NavItem className="login">
-              <Button bsStyle="success" bsSize="xsmall" onClick={this.props.auth.login}>Iniciar sesión</Button>
-            </NavItem>
-          }
-          {this.props.auth.isAuthenticated() &&
-            <NavItem className="login">
-              <Button bsStyle="danger" bsSize="xsmall" onClick={this.props.auth.logout}>Cerrar sesión</Button>
-            </NavItem>
-          }
+          {!this.props.auth.isAuthenticated() && (
+            <Button
+              className="login"
+              bsStyle="success"
+              onClick={this.props.auth.login}
+            >
+              Iniciar sesión
+            </Button>
+          )}
+          {this.props.auth.isAuthenticated() && (
+            <div className="login">
+              Bienvenido <i>{name}</i>{space}
+              <Button bsStyle="danger" onClick={this.props.auth.logout}>
+                Cerrar sesión
+              </Button>
+            </div>
+          )}
         </Nav>
       </Navbar>
     );

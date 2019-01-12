@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Auth from '../Auth';
+import { Grid, Row, PageHeader } from 'react-bootstrap'
 
 export class Callback extends Component {
     componentDidMount() {
@@ -9,9 +10,11 @@ export class Callback extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Loading...</h1>
-            </div>
+            <Grid>
+                <Row>
+                    <PageHeader style={{textAlign: "center"}}>Cargando...</PageHeader>
+                </Row>                
+            </Grid>
         )
     }
 }

@@ -3,7 +3,7 @@ import { Form, FormGroup, FormControl, Button } from "react-bootstrap";
 
 const BuscarPelicula = (props) => {
   return (
-    <Form inline onSubmit={props.peliculaPorBuscar}>
+    <Form inline onSubmit={props.peliculaPorBuscar} style={{textAlign: "center"}} >
         <FormGroup>
             <FormControl type="text" name="peliculaPorBuscar" placeholder="¿Qué pelicula buscas?" />
         </FormGroup>{" "}      

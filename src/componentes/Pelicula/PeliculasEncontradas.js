@@ -10,7 +10,7 @@ const PeliculasEncontradas = (props) => (
                 </Media.Left>
                 <Media.Body>
                     <Media.Heading>{pelicula.trackName} <Badge>{pelicula.contentAdvisoryRating}</Badge></Media.Heading>
-                    <p>{pelicula.longDescription}</p>
+                    <p style={{textAlign: "justify"}}>{pelicula.longDescription}</p>
                     <Button bsSize="xsmall" href={pelicula.previewUrl}>Ver trailer</Button>
                 </Media.Body>
             </Media>
