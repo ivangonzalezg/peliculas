@@ -7,6 +7,7 @@ import { Menu } from "./Menu";
 import { PaginaNoExiste } from "./PaginaNoExiste";
 import { Inicio } from "./Inicio";
 import { Callback } from "./Callback";
+import { Cargando } from "./Cargando";
 
 export class App extends Component {
   render() {
@@ -14,13 +15,12 @@ export class App extends Component {
       <Router>
         <div>
           <Menu {...this.props}/>
-          <br/>
-          <br/>
           <Switch>
             <Route path="/" component={Inicio} exact />
             <Route path="/saludar" component={Saludo} exact />
             <Route path="/peliculas" component={Pelicula} exact />
             <Route path="/callback" component={Callback} exact />
+            <Route path="/cargando" component={Cargando} exact />
             <Route component={PaginaNoExiste} />
           </Switch>
         </div>

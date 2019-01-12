@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavItem, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import './Menu.css';
 
 export class Menu extends Component {
   render() {
     return (
-      <Navbar style={{position: "fixed", width: "100%"}} >
-        <Nav>
+      <Navbar className="Navbar-top">
+        <Nav className="Nav-top">
           <NavItem
             componentClass={Link}
             href="/"
@@ -34,12 +35,12 @@ export class Menu extends Component {
             Saludar
           </NavItem>
           {!this.props.auth.isAuthenticated() &&
-            <NavItem style={{position: "absolute", right: "0%"}}>
+            <NavItem className="login">
               <Button bsStyle="success" bsSize="xsmall" onClick={this.props.auth.login}>Iniciar sesión</Button>
             </NavItem>
           }
           {this.props.auth.isAuthenticated() &&
-            <NavItem style={{position: "absolute", right: "0%"}}>
+            <NavItem className="login">
               <Button bsStyle="danger" bsSize="xsmall" onClick={this.props.auth.logout}>Cerrar sesión</Button>
             </NavItem>
           }

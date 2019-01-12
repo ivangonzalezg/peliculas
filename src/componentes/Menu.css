@@ -1,0 +1,9 @@
+.Navbar-top {
+    width: 100%;
+}
+
+@media (min-width: 700px) {
+    .Nav-top {
+        width: 100%;
+    }
+}
