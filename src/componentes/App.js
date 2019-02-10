@@ -18,7 +18,9 @@ export class App extends Component {
           <Switch>
             <Route path="/" component={Inicio} exact />
             <Route path="/saludar" component={Saludo} exact />
-            <Route path="/peliculas" component={Pelicula} exact />
+            {this.props.auth.isAuthenticated() && (
+              <Route path="/peliculas" component={Pelicula} exact />
+            )}
             <Route path="/callback" component={Callback} exact />
             <Route path="/cargando" component={Cargando} exact />
             <Route component={PaginaNoExiste} />
